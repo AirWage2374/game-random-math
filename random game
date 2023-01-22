@@ -1,0 +1,28 @@
+package coba;
+import java.util.Scanner;
+import java.util.Random;
+
+public class game {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner angka = new Scanner(System.in);
+		Random computer = new Random();
+		int rand = computer.nextInt(100);
+		for (int x=10;x>=1;x--) {
+			System.out.print("Masukan angka = ");
+			int man = angka.nextInt();
+			if (man > rand) {
+				System.out.println("Angka terlalu besar");
+				System.out.println("Anda memiliki kesempatan = " +x);
+			} else if (man < rand) {
+				System.out.println("Angka terlalu kecil");
+				System.out.println("Anda memiliki kesempatan = " +x);
+			} else if (man == rand) {
+				System.out.println("Selamat anda benar");
+				System.exit(0);
+			}
+		}
+	}
+
+}
